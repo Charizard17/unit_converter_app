@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Unit Converter</title>
+    <style>
+      body {
+        margin-top: 70px;
+        background: #333;
+        color: #fff;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      #linkId {
+        width: 120px;
+        font-size: 30px;
+        text-align: center;
+        border: 3px solid rgb(27, 19, 19);
+        border-radius: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="linkId" class="bg-secondary">
+            <a rel="stylesheet" href="index.html">Home</a>
+          </div>
+          <h1 class="display-4 text-center">Measure Converter</h1>
+          <form>
+            <div class="form-group">
+              <input
+                id="mInput"
+                type="number"
+                class="form-control form-control-lg"
+                placeholder="Enter Meter..."
+              />
+            </div>
+          </form>
+          <div id="output">
+            <div class="card bg-primary mb-2">
+              <div class="card-block">
+                <h4>Centimeter:</h4>
+                <div id="cmOutput"></div>
+              </div>
+            </div>
+            <div class="card bg-success mb-2">
+              <div class="card-block">
+                <h4>Feet:</h4>
+                <div id="feetOutput"></div>
+              </div>
+            </div>
+            <div class="card bg-danger mb-2">
+              <div class="card-block">
+                <h4>Inch:</h4>
+                <div id="inchOutput"></div>
+              </div>
+            </div>
+            <div class="card bg-info mb-2">
+              <div class="card-block">
+                <h4>Yard:</h4>
+                <div id="yardOutput"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="measure.js"></script>
+  </body>
+</html>
