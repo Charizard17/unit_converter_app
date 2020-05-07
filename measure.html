@@ -38,40 +38,67 @@
           <div id="linkId" class="bg-secondary">
             <a rel="stylesheet" href="index.html">Home</a>
           </div>
-          <br><br><br>
+          <br /><br /><br />
           <h1 class="display-4 text-center">Measure Converter</h1>
           <form>
             <div class="form-group">
-              <input
-                id="mInput"
-                type="number"
-                class="form-control form-control-lg"
-                placeholder="Enter Meter..."
-              />
+              <div class="input-group">
+                <input
+                  id="mInput"
+                  type="number"
+                  class="form-control form-control-lg"
+                  placeholder="Enter Meter..."
+                />
+                <div class="input-group-append">
+                  <button
+                    class="btn btn-outline-secondary dropdown-toggle bg-light"
+                    type="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Change Unit
+                  </button>
+                  <div class="dropdown-menu">
+                    <option class="dropdown-item" onclick="changeCentimeter()"
+                      >Centimeter</option
+                    >
+                    <option class="dropdown-item" onclick="changeFeet()"
+                      >Feet</option
+                    >
+                    <option class="dropdown-item" onclick="changeInch()"
+                      >Inch</option
+                    >
+                    <option class="dropdown-item" onclick="changeYard()"
+                      >Yard</option
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
           </form>
           <div id="output">
             <div class="card bg-primary mb-2">
               <div class="card-block">
-                <h4>Centimeter:</h4>
+                <h4 id="cmh4">Centimeter:</h4>
                 <div id="cmOutput"></div>
               </div>
             </div>
             <div class="card bg-success mb-2">
               <div class="card-block">
-                <h4>Feet:</h4>
+                <h4 id="feeth4">Feet:</h4>
                 <div id="feetOutput"></div>
               </div>
             </div>
             <div class="card bg-danger mb-2">
               <div class="card-block">
-                <h4>Inch:</h4>
+                <h4 id="inchh4">Inch:</h4>
                 <div id="inchOutput"></div>
               </div>
             </div>
             <div class="card bg-info mb-2">
               <div class="card-block">
-                <h4>Yard:</h4>
+                <h4 id="yardh4">Yard:</h4>
                 <div id="yardOutput"></div>
               </div>
             </div>
@@ -81,5 +108,20 @@
     </div>
 
     <script src="measure.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
